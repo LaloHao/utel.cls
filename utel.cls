@@ -9,7 +9,7 @@
 \RequirePackage[spanish]{babel}
 \selectlanguage{spanish}
 \RequirePackage{datetime}
-\RequirePackage[letter, margin=0.5in]{geometry}
+\RequirePackage[a4paper, left=1in,right=1in,top=3cm,bottom=1in]{geometry}
 \RequirePackage[outputdir=.]{minted}
 \RequirePackage{xcolor}
 \RequirePackage[absolute,overlay]{textpos}
