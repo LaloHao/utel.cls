@@ -16,72 +16,72 @@
 
 Para instalar la clase =utel= en el sistema (a nivel usuario), buscamos el
 directorio que latex utiliza:
-#+begin_src shell :exports both
+#+begin_src shell :exports both :wrap src shell
 kpsewhich -var-value=TEXMFHOME
 #+end_src
 
 #+RESULTS:
-:results:
+#+begin_src shell
 /home/hao/texmf
-:end:
+#+end_src
 
 Creamos la carpeta en caso de no existir
-#+begin_src shell :exports both
+#+begin_src shell :exports both :wrap src shell
 mkdir -p /home/hao/texmf/tex/latex/
 #+end_src
 
 #+RESULTS:
-:results:
-:end:
+#+begin_src shell
+#+end_src
 
 Podemos ver que la clase =article= si esta disponible para utilizar:
-#+begin_src shell :exports both
+#+begin_src shell :exports both :wrap src shell
 kpsewhich article.cls
 #+end_src
 
 #+RESULTS:
-:results:
+#+begin_src shell
 /nix/store/xym6hj82qja3j0k2wmglinim3lgx0ccg-texlive-combined-full-2021.20210408/share/texmf/tex/latex/base/article.cls
-:end:
+#+end_src
 
 Pero la nuestra no:
-#+begin_src shell :exports both
+#+begin_src shell :exports both :wrap src shell
 kpsewhich utel.cls
 #+end_src
 
 #+RESULTS:
-:results:
+#+begin_src shell
 ./utel.cls
-:end:
+#+end_src
 
 Nótese que la encuentra en el mismo directorio donde nos encontramos, pero si
 nos vamos a otro directorio, ya no:
-#+begin_src shell :exports both
+#+begin_src shell :exports both :wrap src shell
 (cd /tmp/ && kpsewhich utel.cls)
 #+end_src
 
 #+RESULTS:
-:results:
-:end:
+#+begin_src shell
+#+end_src
 
 Hacemos un enlace simbolico a la carpeta donde tenemos este proyecto:
-#+begin_src shell :exports both
+#+begin_src shell :exports both :wrap src shell
 ln -s $PWD /home/hao/texmf/tex/latex
 #+end_src
 
 #+RESULTS:
-:results:
-:end:
+#+begin_src shell
+#+end_src
 
 ✓ Y volvemos a verificar:
-#+begin_src shell :exports both
+#+begin_src shell :exports both :wrap src shell
 (cd /tmp/ && kpsewhich utel.cls)
 #+end_src
 
 #+RESULTS:
-:results:
+#+begin_src shell
 /home/hao/texmf/tex/latex/utel/utel.cls
-:end:
+#+end_src
 
 * Ejemplo
 Puedes ver un ejemplo de un PDF generado [[file:examples/org/example.pdf][aqui]]. Se utilizo un [[file:examples/org/example.org][archivo de org-mode]].
