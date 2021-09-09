@@ -1,0 +1,52 @@
+#+TITLE: Formato para entrega de tareas
+#+AUTHOR: Eduardo V.
+#+LATEX_CLASS: utel
+#+LATEX_HEADER: \materia{Programacion Estructurada}
+#+LATEX_HEADER: \carrera{Ingenieria en sistemas computacionales}
+#+LATEX_HEADER: \maestro{Juan Perez}
+#+LATEX_HEADER: \matricula{012345678}
+#+LATEX_HEADER: \unidad{1}{Aprendiendo \LaTeX}
+#+LATEX_HEADER: \usemintedstyle{native}
+#+LATEX_HEADER: \definecolor{dark}{HTML}{272822}
+#+LATEX_HEADER: \usepackage{lipsum}
+#+OPTIONS: toc:nil
+
+* Formato de la página
+#+NAME: margenes
+#+CAPTION: Margenes del documento
+#+ATTR_LATEX: :width 5.74cm :center t
+[[file:figures/margenes.png]]
+# #+ATTR_LATEX: :float nil :width 5.74cm :placement {r}{0.4\textwidth}
+
+* Formato de los textos
+#+begin_export latex
+\begin{multicols}{2}
+#+end_export
+
++ *Letra tipo Arial en 11pts.*
+
+  #+NAME: letra-tipo-arial
+  #+ATTR_LATEX: :width 7cm :height 2.3cm :placement [!h]
+  [[file:figures/letra-tipo-arial.png]]
+
++ *Título: en mayúsculas y negritas, de 15pts, en rojo y centrado.*
++ *Subtítulos: tipo oración, en negritas, de 12pts, en azul, alineados a la
+  izquierda y subrayados.*
+
+  #+NAME: subtitulos
+  #+ATTR_LATEX: :width 7cm :height 3.2cm :placement [H]
+  [[file:figures/subtitulos.png]]
++ *Interlineado: 1.5 lineas.*
+\newline
+#+begin_export latex
+\vfill\null
+\columnbreak
+#+end_export
+
++ *Numeración de páginas en la esquina inferior derecha.*
++ *Ortografia, acentuacion y redaccion correctas.*
++ *Referencias bibliograficas en formato APA vigente* ([[https://www.apa.org][www.apa.org]])
+
+#+begin_export latex
+\end{multicols}
+#+end_export
