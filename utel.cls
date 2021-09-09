@@ -1,8 +1,10 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{utel}[2021/09/08 Formato Utel]
 
+\RequirePackage{hyperref}
+\let\Hypersetup\hypersetup%
+\renewcommand\hypersetup{}
 \LoadClass{article}
-\newcommand{\headlinecolor}{\normalcolor}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[spanish]{babel}
 \selectlanguage{spanish}
@@ -25,6 +27,7 @@
 \RequirePackage[explicit,compact]{titlesec}
 \RequirePackage{ulem}
 
+\newcommand{\headlinecolor}{\normalcolor}
 \renewcommand*\familydefault{\sfdefault}
 \RequirePackage[T1]{fontenc}
 
@@ -33,6 +36,14 @@
 \definecolor{gray}{HTML}{7f7f7f}
 \definecolor{red}{HTML}{d52b1e}
 \definecolor{black}{HTML}{000000}
+\definecolor{urlcolor}{HTML}{808080}
+
+\Hypersetup{%
+ colorlinks=true,
+ linkcolor=blue,
+ filecolor=magenta,
+ urlcolor=urlcolor,
+}
 
 \renewcommand{\normalsize}{\linespread{1.5}\fontsize{11}{10}\selectfont}
 \renewcommand{\normalcolor}{\color{black}}
