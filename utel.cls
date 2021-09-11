@@ -33,7 +33,7 @@
 
 \RequirePackage{fancyhdr}
 \RequirePackage[explicit,compact]{titlesec}
-\RequirePackage{ulem}
+\RequirePackage[normalem]{ulem}
 
 \newcommand{\headlinecolor}{\normalcolor}
 \renewcommand*\familydefault{\sfdefault}
@@ -150,6 +150,7 @@
   \par\noindent\ignorespaces\underline{\textbf{{\color{blue}#1}}\hspace*{\remaining}\par}%
   \normalsize
   \normalcolor
+  \normalem
 }
 
 \titleformat{\section}
