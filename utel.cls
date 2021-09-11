@@ -3,7 +3,15 @@
 
 \RequirePackage{hyperref}
 \let\Hypersetup\hypersetup%
-\renewcommand\hypersetup{}
+\renewcommand\hypersetup[1]{%
+  \Hypersetup{%
+    #1,%
+    colorlinks=true,%
+    linkcolor=blue,%
+    filecolor=magenta,%
+    urlcolor=urlcolor,%
+  }%
+}
 \LoadClass{article}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[spanish]{babel}
@@ -37,13 +45,6 @@
 \definecolor{red}{HTML}{d52b1e}
 \definecolor{black}{HTML}{000000}
 \definecolor{urlcolor}{HTML}{808080}
-
-\Hypersetup{%
- colorlinks=true,
- linkcolor=blue,
- filecolor=magenta,
- urlcolor=urlcolor,
-}
 
 \renewcommand{\normalsize}{\linespread{1.5}\fontsize{11}{10}\selectfont}
 \renewcommand{\normalcolor}{\color{black}}
